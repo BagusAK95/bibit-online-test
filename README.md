@@ -13,8 +13,19 @@ FROM
 
 ## 4. Anagram
 
-### Run Code
+#### Test
 
 ```
 node anagram/anagram.js
+```
+
+#### Result
+
+```
+[
+  [ 'kita', 'atik', 'tika' ],
+  [ 'aku', 'kua' ],
+  [ 'kia' ],
+  [ 'makan' ]
+]
 ```
