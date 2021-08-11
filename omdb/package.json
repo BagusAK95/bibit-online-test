@@ -1,4 +1,8 @@
 {
+  "scripts": {
+    "start": "tsc && node --unhandled-rejections=strict ./dist/app.js",
+    "debug": "export DEBUG=* && npm run start"
+  },
   "dependencies": {
     "cors": "^2.8.5",
     "debug": "^4.3.2",
