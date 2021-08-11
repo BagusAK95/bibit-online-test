@@ -10,3 +10,11 @@ FROM
 	"user" child
 	LEFT JOIN "user" parent ON child."Parent" = parent.id;
 ```
+
+## 4. Anagram
+
+### Run Code
+
+```
+node anagram/anagram.js
+```
