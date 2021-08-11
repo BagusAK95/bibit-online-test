@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "main.js",
   "scripts": {
+    "prebuild": "rimraf dist",
     "build": "tsc -p tsconfig.build.json",
-    "start": "npm run build && node dist/main.js",
-    "debug": "export DEBUG=log:* && npm run start",
+    "start": "node dist/main.js",
     "test": "jest"
   },
   "dependencies": {
