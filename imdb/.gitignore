@@ -1,0 +1,9 @@
+# Dependency directories
+node_modules/
+
+# Typescript build
+dist
+
+# dotenv environment variables file
+.env
+.env.test
