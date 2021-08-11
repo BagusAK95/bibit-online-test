@@ -9,9 +9,12 @@ const connection: any = {
   password: process.env.SQL_PASSWORD || 'postgres',
   database: process.env.SQL_DATABASE || 'postgres',
   entities: [Log],
-  synchronize: true,
-  ssl: true,
-  extra: {
+  synchronize: true
+}
+
+if (process.env.ENV === 'production') {
+  connection.ssl = true;
+  connection.extra = {
     ssl: {
       rejectUnauthorized: false
     }
