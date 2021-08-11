@@ -1,1 +1,1 @@
-web: cd omdb && npm run start
+web: cd omdb
