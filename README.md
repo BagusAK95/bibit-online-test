@@ -1,6 +1,6 @@
 # Bibit Online Test - Back-end Node.js
 
-# 1. Simple Database Querying
+## 1. Simple Database Querying
 ```
 SELECT
 	child.id,
