@@ -3,6 +3,7 @@ import * as http from 'http';
 import { createConnection } from 'typeorm';
 import { RoutesConfig } from './commons/configs/routes.config';
 import { MovieRoutes } from './movies/movie.routes';
+import { LogRoutes } from './logs/log.routes';
 import logMiddleware from './commons/middlewares/log.middleware';
 import dbConn from './commons/configs/database.config'
 import debug from 'debug';
@@ -22,6 +23,7 @@ app.get('/', (req: express.Request, res: express.Response) => {
 });
 
 routes.push(new MovieRoutes(app));
+routes.push(new LogRoutes(app));
 
 createConnection(dbConn).then(() => {
     server.listen(port, () => {
