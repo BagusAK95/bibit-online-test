@@ -2,7 +2,7 @@ import express from 'express';
 import MovieService from '../services/movie.service';
 
 class MovieController {
-    async search(req: express.Request, res: express.Response) {
+    async search(req: any, res: any) {
         const title = req.query.title;
         const page = req.query.page;
 
@@ -10,7 +10,7 @@ class MovieController {
         res.status(200).send(result);
     }
 
-    async detail(req: express.Request, res: express.Response) {
+    async detail(req: any, res: any) {
         const id = req.params.id;
 
         const result = await MovieService.detail(id)

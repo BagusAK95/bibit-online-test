@@ -1,4 +1,4 @@
-# Bibit Online Test - Back-end Node.js
+# Bibit Online Test - Node.js
 
 ## 1. Database Query
 

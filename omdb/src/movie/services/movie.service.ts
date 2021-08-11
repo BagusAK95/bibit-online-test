@@ -1,10 +1,10 @@
 import * as axios from 'axios';
 
 class MovieService {
-    private readonly omdbUrl: string = `http://www.omdbapi.com/?apikey=${process.env.OMDB_API_KEY}`;;
+    private readonly omdbUrl: string = `http://www.omdbapi.com/?apikey=${process.env.OMDB_API_KEY}`;
     private readonly http: axios.AxiosStatic = axios.default;
 
-    async search(title: any, page: any) {
+    async search(title: string, page: number) {
         try {
             const query: string[] = [];
             if (title) {
