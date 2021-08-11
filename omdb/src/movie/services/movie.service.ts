@@ -18,13 +18,17 @@ class MovieService {
             const result = await this.http.get(`${this.omdbUrl}&${query.join('&')}`);
             return result.data;
         } catch (error) {
-            return error.message
+            throw new Error(error.message)
         }
     }
 
     async detail(id: string) {
-        const result = await this.http.get(`${this.omdbUrl}&i=${id}&r=json`);
-        return result.data;
+        try {
+            const result = await this.http.get(`${this.omdbUrl}&i=${id}&r=json`);
+            return result.data;
+        } catch (error) {
+            throw new Error(error.message)
+        }
     }
 }
 
