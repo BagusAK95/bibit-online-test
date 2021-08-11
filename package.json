@@ -1,0 +1,19 @@
+{
+  "name": "bibit-online-test",
+  "version": "1.0.0",
+  "description": "## 1. Database Query",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BagusAK95/bibit-online-test.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BagusAK95/bibit-online-test/issues"
+  },
+  "homepage": "https://github.com/BagusAK95/bibit-online-test#readme"
+}
