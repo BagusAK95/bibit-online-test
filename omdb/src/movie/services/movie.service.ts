@@ -1,21 +1,41 @@
 import * as axios from 'axios';
+import * as dotenv from 'dotenv';
 
-export class MovieService {
+class MovieService {
     private readonly omdbUrl: string;
     private readonly http: any;
     
     constructor() {
+        dotenv.config();
+
         const omdbApiKey = process.env.OMDB_API_KEY;
         this.omdbUrl = `http://www.omdbapi.com/?apikey=${omdbApiKey}`;
 
         this.http = axios.default;
     }
 
-    async search(title: string, page: number) {
-        return await this.http.get(`${this.omdbUrl}&s=${title}&page=${page}`);
+    async search(title: any, page: any) {
+        try {
+            const query: string[] = [];
+            if (title) {
+                query.push(`s=${title}`)
+            }
+            if (page) {
+                query.push(`page=${page}`)
+            }
+            query.push(`r=json`)
+
+            const result = await this.http.get(`${this.omdbUrl}&${query.join('&')}`);
+            return result.data;
+        } catch (error) {
+            return error.message
+        }
     }
 
     async detail(id: string) {
-        return await this.http.get(`${this.omdbUrl}&i=${id}`);
+        const result = await this.http.get(`${this.omdbUrl}&i=${id}&r=json`);
+        return result.data;
     }
 }
+
+export default new MovieService();
