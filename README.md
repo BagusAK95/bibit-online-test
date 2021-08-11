@@ -1,6 +1,9 @@
 # Bibit Online Test - Back-end Node.js
 
 ## 1. Database Query
+
+#### SQL
+
 ```
 SELECT
 	child.id,
@@ -11,7 +14,7 @@ FROM
 	LEFT JOIN "user" parent ON child."Parent" = parent.id;
 ```
 
-## 3. Refactor
+## 3. Refactor Code
 
 #### Test
 
