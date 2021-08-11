@@ -1,18 +1,8 @@
 import * as axios from 'axios';
-import * as dotenv from 'dotenv';
 
 class MovieService {
-    private readonly omdbUrl: string;
-    private readonly http: any;
-    
-    constructor() {
-        dotenv.config();
-
-        const omdbApiKey = process.env.OMDB_API_KEY;
-        this.omdbUrl = `http://www.omdbapi.com/?apikey=${omdbApiKey}`;
-
-        this.http = axios.default;
-    }
+    private readonly omdbUrl: string = `http://www.omdbapi.com/?apikey=${process.env.OMDB_API_KEY}`;;
+    private readonly http: axios.AxiosStatic = axios.default;
 
     async search(title: any, page: any) {
         try {
