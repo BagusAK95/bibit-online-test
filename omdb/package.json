@@ -1,14 +1,15 @@
 {
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
-    "start": "npm run build && node -r dotenv/config dist/main.js",
-    "debug": "export DEBUG=log && npm run start"
+    "start": "npm run build && node dist/main.js",
+    "debug": "export DEBUG=log:* && npm run start"
   },
   "dependencies": {
     "axios": "^0.21.1",
     "cors": "^2.8.5",
     "debug": "^4.3.2",
     "express": "^4.17.1",
+    "mysql": "^2.18.1",
     "pg": "^8.7.1",
     "reflect-metadata": "^0.1.13",
     "typeorm": "^0.2.36"
