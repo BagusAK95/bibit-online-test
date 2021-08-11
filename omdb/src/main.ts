@@ -31,6 +31,6 @@ createConnection(dbConn).then(() => {
         });
     });
 }).catch((err) => {
-    debugLog(`Unable to connect to database`);
+    debugLog(`Unable to connect to database: ${err.message}`);
     process.exit(1)
 })
