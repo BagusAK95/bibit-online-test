@@ -14,6 +14,16 @@ FROM
 	LEFT JOIN "user" parent ON child."Parent" = parent.id;
 ```
 
+#### Result
+
+```
+| id | username | parentusername |
+|----|----------|----------------|
+|  1 | Ali      | Budi           |
+|  2 | Budi     |                |
+|  3 | Cecep    | Ali            |
+```
+
 ## 3. Refactor Code
 
 #### Test
