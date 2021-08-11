@@ -24,16 +24,67 @@ FROM
 |  3 | Cecep    | Ali            |
 ```
 
-## 3. Refactor Code
+## 2. ExpressJS App
 
-#### Test
-
+#### Setup Environment
 ```
-node refactor/refactor.js
+export ENV=development
+export PORT=3000
+export DEBUG=log:*
+
+export OMDB_API_KEY=faf7e5bb
+
+export SQL_TYPE=postgres
+export SQL_HOST=127.0.0.1
+export SQL_PORT=5432
+export SQL_USERNAME=postgres
+export SQL_PASSWORD=secret
+export SQL_DATABASE=demo
+```
+
+#### Source Environment
+```
+source .env
+```
+
+#### Build App
+```
+npm run build
+```
+
+#### Test App
+```
+npm test
+```
+
+#### Start App
+```
+npm start
 ```
 
 #### Result
+```
+Server running on port 3000
+```
 
+#### Public URL
+```
+https://bibit-online-test.herokuapp.com
+```
+
+#### Postman Documentation
+```
+https://documenter.getpostman.com/view/3187497/Tzz5tydM
+```
+
+## 3. Refactor Code
+
+#### Test
+```
+node refactor.js
+```
+
+#### Result
 ```
 Application Programming Interface
 ```
@@ -43,13 +94,11 @@ Application Programming Interface
 ## 4. Anagram
 
 #### Test
-
 ```
-node anagram/anagram.js
+node anagram.js
 ```
 
 #### Result
-
 ```
 [
   [ 'kita', 'atik', 'tika' ],
