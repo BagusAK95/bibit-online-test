@@ -1,7 +1,6 @@
 {
   "name": "omdb",
   "version": "1.0.0",
-  "description": "",
   "main": "main.js",
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
@@ -53,5 +52,6 @@
   "bugs": {
     "url": "https://github.com/BagusAK95/bibit-online-test/issues"
   },
-  "homepage": "https://github.com/BagusAK95/bibit-online-test#readme"
+  "homepage": "https://github.com/BagusAK95/bibit-online-test#readme",
+  "description": ""
 }
