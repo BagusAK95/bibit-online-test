@@ -10,8 +10,11 @@ const connection: any = {
   database: process.env.SQL_DATABASE || 'postgres',
   entities: [Log],
   synchronize: true,
-  ssl: {
-    rejectUnauthorized: Boolean(process.env.SQL_SSL_DISABLED) || false
+  ssl: true,
+  extra: {
+    ssl: {
+      rejectUnauthorized: false
+    }
   }
 }
 
