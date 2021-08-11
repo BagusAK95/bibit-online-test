@@ -18,14 +18,14 @@ app.use(express.json());
 app.use(cors());
 app.use('*', logMiddleware.save)
 app.get('/', (req: express.Request, res: express.Response) => {
-    res.status(200).send(`Server running at http://localhost:${port}`)
+    res.status(200).send(`Server running on port ${port}`)
 });
 
 routes.push(new MovieRoutes(app));
 
 createConnection(dbConn).then(() => {
     server.listen(port, () => {
-        debugLog(`Server running at http://localhost:${port}`);
+        debugLog(`Server running on port ${port}`);
         routes.forEach((route: RoutesConfig) => {
             debugLog(`Routes configured for ${route.getName()}`);
         });
