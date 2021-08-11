@@ -1,5 +1,5 @@
 import express from 'express';
-import { RoutesConfig } from '../common/config/routes.config';
+import { RoutesConfig } from '../common/configs/routes.config';
 
 export class MovieRoutes extends RoutesConfig {
     constructor(app: express.Application) {

@@ -2,7 +2,7 @@ import express from 'express';
 import * as http from 'http';
 import * as bodyparser from 'body-parser';
 import cors from 'cors'
-import { RoutesConfig } from './common/config/routes.config';
+import { RoutesConfig } from './common/configs/routes.config';
 import { MovieRoutes } from './movie/movie.routes';
 import debug from 'debug';
 
