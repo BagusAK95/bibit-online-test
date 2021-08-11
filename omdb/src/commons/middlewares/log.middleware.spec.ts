@@ -1,4 +1,4 @@
-import LogService from '../../log/service/log.service'
+import LogService from '../../logs/services/log.service'
 import LogMiddleware from './log.middleware'
 
 describe('LogMiddleware', () => {

@@ -1,10 +1,10 @@
 import express from 'express';
 import * as http from 'http';
 import { createConnection } from 'typeorm';
-import { RoutesConfig } from './common/configs/routes.config';
-import { MovieRoutes } from './movie/movie.routes';
-import logMiddleware from './common/middleware/log.middleware';
-import dbConn from './common/configs/database.config'
+import { RoutesConfig } from './commons/configs/routes.config';
+import { MovieRoutes } from './movies/movie.routes';
+import logMiddleware from './commons/middlewares/log.middleware';
+import dbConn from './commons/configs/database.config'
 import debug from 'debug';
 import cors from 'cors'
 

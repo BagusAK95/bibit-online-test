@@ -1,5 +1,5 @@
 import { getRepository, Repository } from "typeorm";
-import { Log } from '../entity/log.entity'
+import { Log } from '../entitys/log.entity'
 
 class LogService {    
     async save(url: string) {

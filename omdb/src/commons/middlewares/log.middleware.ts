@@ -1,4 +1,4 @@
-import LogService from '../../log/service/log.service'
+import LogService from '../../logs/services/log.service'
 
 class LogMiddleware {
     async save(req: any, res: any, next: any) {

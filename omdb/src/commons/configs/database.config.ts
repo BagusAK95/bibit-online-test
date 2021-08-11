@@ -1,5 +1,5 @@
 import { ConnectionOptions } from 'typeorm'
-import { Log } from '../../log/entity/log.entity'
+import { Log } from '../../logs/entitys/log.entity'
 
 const connection: any = {
   type: process.env.SQL_TYPE || 'postgres',
