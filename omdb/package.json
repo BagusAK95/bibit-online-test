@@ -1,7 +1,8 @@
 {
   "scripts": {
-    "start": "tsc && node --unhandled-rejections=strict ./dist/app.js",
-    "debug": "export DEBUG=* && npm run start"
+    "build": "tsc -p tsconfig.build.json",
+    "start": "npm run build && node dist/main.js",
+    "debug": "export DEBUG=log && npm run start"
   },
   "dependencies": {
     "cors": "^2.8.5",
