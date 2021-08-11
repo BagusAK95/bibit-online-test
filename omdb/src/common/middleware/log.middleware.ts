@@ -1,8 +1,7 @@
-import express from 'express';
 import LogService from '../../log/service/log.service'
 
 class LogMiddleware {
-    async save(req: express.Request, res: express.Response, next: express.NextFunction) {
+    async save(req: any, res: any, next: any) {
         await LogService.save(req.originalUrl)
         next();
     }
