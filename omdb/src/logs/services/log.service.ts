@@ -9,7 +9,7 @@ class LogService {
 
     async show() {
         const log: Repository<Log> = getRepository(Log);
-        const [ data, total ] = await log.findAndCount({ take: 10 })
+        const [ data, total ] = await log.findAndCount({ take: 10, order: { createdAt: 'DESC' } })
         return {
             data,
             total
