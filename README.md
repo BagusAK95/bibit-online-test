@@ -2,6 +2,8 @@
 
 ## 1. Database Query
 
+I'm used `LEFT JOIN` to get Parent on table user. But need to set alias (Child, Parent) when joining table. It's make get data from same table but like query on 2 table.
+
 #### SQL
 
 ```
@@ -25,6 +27,17 @@ FROM
 ```
 
 ## 2. ExpressJS App
+
+In this App have 3 endpoint: 
+1. `GET /movie?title=xxx&page=1` to get movie list from omdb api
+2. `GET /movie/:id` to get movie detail
+3. `GET /log` to see the log endpoint called
+
+I'm used `postgres` because it's free on Heroku platform. So I can publish the app to public. But if you dont have `postgres` you can change the `SQL_TYPE` variable on .env to `mysql`.
+To collect the log I'm used global middleware because it will log all routes.
+To call omdb api I'm used `axios` because the library is popular as http client.
+I have complete the unit test using `jest` with some test case.
+And I have prepare the Postman Documentation so you will more easier to test my work.
 
 #### Setup Environment
 ```
@@ -79,6 +92,8 @@ https://documenter.getpostman.com/view/3187497/Tzz5tydM
 
 ## 3. Refactor Code
 
+The result of `findFirstStringInBracket` it will return text inside bracket. And I see the code is so long. So I write the new code with `Regex`. It's make the code more concise, efficient and readable like what you want just with 1 line code.
+
 #### Test
 ```
 node refactor.js
@@ -92,6 +107,8 @@ Application Programming Interface
 ### 
 
 ## 4. Anagram
+
+First I will prepare 2 variable `keys` for collect anagram key and `results` for collect word. Then I will loop the words and split the word by latter to sorting the word by latter. The sorted latter I will collect as anagram key. Then I will collect the word to variable `results` base on anagram key index.
 
 #### Test
 ```
